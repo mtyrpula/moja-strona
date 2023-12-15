@@ -1,18 +1,141 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <main>
-        <h1 style="color: #5F021F;">WESOŁYCH ŚWIĄT!!!</h1>  
-      <img src="/choinka.jpg"></img>
-    </main>
-	<script src="index.js"></script>
-  </body>
-</html>
+<style>
+@-webkit-keyframes lightswitch-f {
+    0% {opacity: 100;}
+    25% {opacity: 0;}
+    50% {opacity:100;}
+    75% {opacity: 0;}
+    100% {opacity: 100;}
+} 
+		  
+@keyframes lightswitch-f {
+    0% {opacity: 100;}
+    25% {opacity: 0;}
+    50% {opacity:100;}
+    75% {opacity: 0;}
+    100% {opacity: 100;}	
+} 
+
+@-webkit-keyframes lightswitch-s {
+    0% {opacity: 0;}
+    25% {opacity: 100;}
+    50% {opacity: 0;}
+    75% {opacity: 100;}
+    100% {opacity: 0;}
+} 
+		  
+@keyframes lightswitch-s {
+    0% {opacity: 0;}
+    25% {opacity: 100;}
+    50% {opacity: 0;}
+    75% {opacity: 100;}
+    100% {opacity: 0;}
+} 
+
+
+body {
+	background: #FFF;
+}
+
+
+h1 {
+	display: block;
+	font-family: cursive;
+	color: #F22613;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 0.5em;
+}
+
+.tree-1 {
+	border-bottom: 100px solid #27ae60;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	height: 0;
+	width: 100px;
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 37vh;
+}
+
+.tree-1::before {
+	content: "";
+	display: block;
+	position: absolute;
+	border-left: 70px solid transparent;
+	border-right: 70px solid transparent;
+	border-bottom: 126px solid #27ae60;
+	width: 0;
+	height: 0;
+	margin-top: -7.8em;
+	margin-left: -1.2em;
+}
+
+.tree-1::after {
+	content: "";
+	display: block;
+	position: absolute;
+	border-bottom: 100px solid #27ae60;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	height: 0;
+	/* width: 100px; */
+	width: 160px;
+	margin-top: 6em;
+	margin-left: -4.9em;
+}
+
+.tree-2 {
+	display: block;
+	width: 2em;
+	height: 3em;
+	background-color: #96281B;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 6em;
+}
+
+.lights-1 {
+	display: block;
+	box-shadow: -3.5em 3.5em 0 0em #f1c40f, 3.5em 2.5em 0 0em #f1c40f, -0.5em -9em 0 0 #f1c40f, 2em -4em 0 0 #f1c40f, -1em -5em 0 0 #f1c40f, 1em -8em 0 0 #f1c40f, -4em -1em 0 0 #f1c40f, 0em 5em 0 0 #f1c40f, 6em 5em 0 0 #f1c40f, 4em -1em 0 0 #f1c40f;
+	background: #f1c40f;
+	width: 0.5em;
+	height: 0.5em;
+	overflow: hidden;
+	border-radius: 1em;
+	margin-top: 5em;
+	margin-left: 2.5em;
+	position: absolute;
+	z-index: 100;
+	animation: lightswitch-f 5s infinite;
+	-webkit-animation: lightswitch-f 5s infinite;
+}
+
+.lights-2 {
+	display: block;
+	box-shadow: -3.5em 3.5em 0 0em #f1c40f, 3.5em 2.5em 0 0em #f1c40f, -0.5em -9em 0 0 #f1c40f, 2em -4em 0 0 #f1c40f, -1em -5em 0 0 #f1c40f, 1em -8em 0 0 #f1c40f, -4em -1em 0 0 #f1c40f, 0em 5em 0 0 #f1c40f, 6em 5em 0 0 #f1c40f, 4em -1em 0 0 #f1c40f;
+	background: #f1c40f;
+	width: 0.5em;
+	height: 0.5em;
+	overflow: hidden;
+	border-radius: 1em;
+	margin-top: 4.8em;
+	margin-left: 2.9em;
+	position: absolute;
+	z-index: 100;
+	transform: rotate(224deg);
+	animation: lightswitch-s 5s infinite;
+	-webkit-animation: lightswitch-s 5s infinite;
+}
+</style>
+
+<h1>Merry Christmas!</h1>
+
+
+
+<div class="tree-1">
+	<div class="lights-1"></div>
+	<div class="lights-2"></div>
+</div>
+
+<div class="tree-2"></div>
